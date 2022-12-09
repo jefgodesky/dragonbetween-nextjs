@@ -1,4 +1,9 @@
 @use 'partials/atoms';
 @use 'partials/typography';
 @use 'partials/layout';
+
+// Major page sections
 @use 'partials/header';
+
+// Special pages
+@use 'partials/home';
