@@ -1,0 +1,10 @@
+{
+  "title": "Modern Age",
+  "description": "The Modern Age covers the most recent 5,000 years of Eberron’s history, since the collapse of the ancient goblinoid empire that dominated Khorvaire in the preceding Age of Monsters.",
+  "text": {
+    "default": "index.md"
+  },
+  "categories": {
+    "History": null
+  }
+}

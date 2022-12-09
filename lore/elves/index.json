@@ -1,0 +1,13 @@
+{
+  "title": "Elves",
+  "description": "Elves are exceptionally long-lived humanoids that have habituated to the material plane, though they are descended\nfrom the eladrin — fey mortals native to Thelanis.",
+  "text": {
+    "Humanoids3": "lvl3.md",
+    "Humanoids2": "lvl2.md",
+    "Humanoids1": "lvl1.md",
+    "default": "lvl0.md"
+  },
+  "categories": {
+    "Humanoids": null
+  }
+}

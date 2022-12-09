@@ -1,0 +1,13 @@
+{
+  "title": "Changelings",
+  "description": "Changelings are a species of humanoids capable of changing their appearance at will.",
+  "text": {
+    "Humanoids3": "lvl3.md",
+    "Humanoids2": "lvl2.md",
+    "Humanoids1": "lvl1.md",
+    "default": "lvl0.md"
+  },
+  "categories": {
+    "Humanoids": null
+  }
+}

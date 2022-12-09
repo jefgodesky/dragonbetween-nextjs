@@ -1,0 +1,13 @@
+{
+  "title": "Goblinoids",
+  "description": "Goblinoids are a subgroup of humanoids native to Khorvaire consisting of bugbears, goblins, and hobgoblins.",
+  "text": {
+    "Humanoids3 || Goblinoid": "lvl3.md",
+    "Humanoids2": "lvl2.md",
+    "Humanoids1": "lvl1.md",
+    "default": "lvl0.md"
+  },
+  "categories": {
+    "Humanoids": null
+  }
+}

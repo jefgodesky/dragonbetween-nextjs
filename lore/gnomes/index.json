@@ -1,0 +1,12 @@
+{
+  "title": "Gnomes",
+  "description": "Gnomes are a species of humanoids native to Thelanis and naturalized to Khorvaire marked by their small stature and fey ancestry. It is said that halflings are to humans what gnomes are to elves.",
+  "text": {
+    "Humanoids3": "lvl3.md",
+    "Humanoids1": "lvl1.md",
+    "default": "lvl0.md"
+  },
+  "categories": {
+    "Humanoids": null
+  }
+}

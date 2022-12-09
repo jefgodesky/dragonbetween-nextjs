@@ -1,0 +1,13 @@
+{
+  "title": "Halflings",
+  "description": "Halflings are a species of humanoids native to the Talenta Plains of Khorvaire remarkable for their short stature.",
+  "text": {
+    "Humanoids3": "lvl3.md",
+    "Humanoids2": "lvl2.md",
+    "Humanoids1": "lvl1.md",
+    "default": "lvl0.md"
+  },
+  "categories": {
+    "Humanoids": null
+  }
+}

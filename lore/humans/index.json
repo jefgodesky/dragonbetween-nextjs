@@ -1,0 +1,13 @@
+{
+  "title": "Humans",
+  "description": "Humans are a widespread species of humanoids native to Sarlona.",
+  "text": {
+    "Humanoids3": "lvl3.md",
+    "Humanoids2": "lvl2.md",
+    "Humanoids1 || Human": "lvl1.md",
+    "default": "lvl0.md"
+  },
+  "categories": {
+    "Humanoids": null
+  }
+}

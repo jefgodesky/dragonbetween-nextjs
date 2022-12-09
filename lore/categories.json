@@ -1,0 +1,201 @@
+{
+  "aberrations": {
+    "title": "Aberrations"
+  },
+  "beasts": {
+    "title": "Beasts",
+    "subcategories": [
+      "birds",
+      "dinosaurs"
+    ]
+  },
+  "birds": {
+    "title": "Birds"
+  },
+  "celestials": {
+    "title": "Celestials"
+  },
+  "constructs": {
+    "title": "Constructs"
+  },
+  "creatures": {
+    "title": "Creatures",
+    "subcategories": [
+      "creatures-by-type"
+    ]
+  },
+  "creatures-by-type": {
+    "title": "Creatures by Type",
+    "main": "creatures",
+    "subcategories": [
+      "aberrations",
+      "beasts",
+      "celestials",
+      "constructs",
+      "dragonkin",
+      "elementals",
+      "fey",
+      "fiends",
+      "giants",
+      "humanoids",
+      "monstrosities",
+      "oozes",
+      "plants",
+      "undead"
+    ]
+  },
+  "daanvi": {
+    "title": "daanvi"
+  },
+  "dal-quor": {
+    "title": "Dal Quor"
+  },
+  "demons": {
+    "title": "Demons"
+  },
+  "devils": {
+    "title": "Devils"
+  },
+  "dinosaurs": {
+    "title": "Dinosaurs"
+  },
+  "dolurrh": {
+    "title": "Dolurrh"
+  },
+  "dragonkin": {
+    "title": "Dragonkin",
+    "subcategories": [
+      "dragons"
+    ]
+  },
+  "dragons": {
+    "title": "Dragons",
+    "subcategories": [
+      "dragons-chromatic",
+      "dragons-metallic"
+    ]
+  },
+  "dragon-chromatic": {
+    "title": "Chromatic Dragons",
+    "secret": "Dragons2"
+  },
+  "dragon-metallic": {
+    "title": "Metallic Dragons",
+    "secret": "Dragons2"
+  },
+  "elementals": {
+    "title": "Elementals",
+    "subcategories": [
+      "genies"
+    ]
+  },
+  "fernia": {
+    "title": "Fernia"
+  },
+  "fey": {
+    "title": "Fey"
+  },
+  "fiends": {
+    "title": "Fiends",
+    "subcategories": [
+      "demons",
+      "devils",
+      "yugoloths"
+    ]
+  },
+  "genies": {
+    "title": "Genies"
+  },
+  "giants": {
+    "title": "Giants"
+  },
+  "goblinoids": {
+    "title": "Goblinoids"
+  },
+  "humanoids": {
+    "title": "Humanoids",
+    "subcategories": [
+      "goblinoids"
+    ]
+  },
+  "irian": {
+    "title": "Irian"
+  },
+  "kythri": {
+    "title": "Kythri"
+  },
+  "lamannia": {
+    "title": "Lamannia"
+  },
+  "liminal-planes": {
+    "title": "Liminal Planes",
+    "subcategories": [
+      "astral-plane",
+      "ethereal-plane"
+    ]
+  },
+  "mabar": {
+    "title": "Mabar"
+  },
+  "monstrosities": {
+    "title": "Monstrosities"
+  },
+  "oozes": {
+    "title": "Oozes"
+  },
+  "orbital-planes": {
+    "title": "Orbital Planes",
+    "subcategories": [
+      "daanvi",
+      "dal-quor",
+      "dolurrh",
+      "fernia",
+      "irian",
+      "kythri",
+      "lamannia",
+      "mabar",
+      "risia",
+      "shavarath",
+      "syrania",
+      "thelanis",
+      "xoriat"
+    ]
+  },
+  "planes": {
+    "title": "Planes",
+    "subcategories": [
+      "orbital-planes",
+      "liminal-planes"
+    ]
+  },
+  "plants": {
+    "title": "Plants",
+    "subcategories": [
+      "trees"
+    ]
+  },
+  "risia": {
+    "title": "Risia"
+  },
+  "shavarath": {
+    "title": "Shavarath"
+  },
+  "syrania": {
+    "title": "Syrania"
+  },
+  "thelanis": {
+    "title": "Thelanis"
+  },
+  "trees": {
+    "title": "Trees"
+  },
+  "undead": {
+    "title": "Undead"
+  },
+  "xoriat": {
+    "title": "Xoriat"
+  },
+  "yugoloths": {
+    "title": "Yugoloths"
+  }
+}

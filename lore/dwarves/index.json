@@ -1,0 +1,13 @@
+{
+  "title": "Dwarves",
+  "description": "Dwarves are a species of humanoids marked by small stature (by humanoid standards), a stocky build, a hearty constitution, and a long lifespan.",
+  "text": {
+    "Humanoids3": "lvl3.md",
+    "Humanoids2": "lvl2.md",
+    "Humanoids1 || Dwarf": "lvl1.md",
+    "default": "lvl0.md"
+  },
+  "categories": {
+    "Humanoids": null
+  }
+}

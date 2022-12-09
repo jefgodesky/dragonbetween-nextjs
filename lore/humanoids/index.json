@@ -1,0 +1,14 @@
+{
+  "title": "Humanoids",
+  "description": "Humanoids are creatures marked by bipedalism, two pairs of limbs, a head, high intelligence, and complex social organization.",
+  "text": {
+    "Humanoids4": "lvl4.md",
+    "Humanoids3": "lvl3.md",
+    "Humanoids2": "lvl2.md",
+    "Humanoids1": "lvl1.md",
+    "default": "lvl0.md"
+  },
+  "categories": {
+    "Creatures": null
+  }
+}

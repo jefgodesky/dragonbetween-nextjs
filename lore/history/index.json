@@ -1,0 +1,7 @@
+{
+  "title": "History",
+  "description": "The known history of Eberron stretches back many thousands of years.",
+  "text": {
+    "default": "index.md"
+  }
+}

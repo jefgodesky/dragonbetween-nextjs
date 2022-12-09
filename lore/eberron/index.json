@@ -1,0 +1,9 @@
+{
+  "title": "Eberron",
+  "text": {
+    "default": "index.md"
+  },
+  "categories": {
+    "Material Plane": null
+  }
+}
