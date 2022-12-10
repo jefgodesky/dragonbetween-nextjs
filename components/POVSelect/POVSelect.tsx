@@ -10,11 +10,11 @@ export default function POVSelect ({ characters, current, onChange }: POVSelectP
   const id = 'pov-select'
   const options = characters.map((name: string, index: number) => (<option key={`pov-option-${index}`}>{name}</option>))
   return (
-    <>
+    <nav className={id}>
       <label htmlFor={id}>POV</label>
       <select id={id} onChange={event => onChange(event)} value={current}>
         {options}
       </select>
-    </>
+    </nav>
   )
 }
