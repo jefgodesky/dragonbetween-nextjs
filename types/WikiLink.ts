@@ -1,6 +1,7 @@
 interface WikiLink {
   id: string
   display: string
+  orig?: string
 }
 
 const isWikiLink = (obj: any): obj is WikiLink => {
@@ -8,6 +9,7 @@ const isWikiLink = (obj: any): obj is WikiLink => {
   if (typeof obj !== 'object') return false
   if (typeof obj.id !== 'string') return false
   if (typeof obj.display !== 'string') return false
+  if (!(obj.orig === undefined || typeof obj.orig === 'string')) return false
   return true
 }
 

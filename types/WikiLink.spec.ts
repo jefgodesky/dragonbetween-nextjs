@@ -3,6 +3,7 @@ import { isWikiLink } from './WikiLink'
 describe('isWikiLink', () => {
   const id = 'test'
   const display = 'Test Link'
+  const orig = `[[${id} | ${display}]]`
 
   it('returns false if given null', () => {
     expect(isWikiLink(null)).toBe(false)
@@ -102,5 +103,37 @@ describe('isWikiLink', () => {
 
   it('returns false if given an object for a display string', () => {
     expect(isWikiLink({ id, display: { display } })).toBe(false)
+  })
+
+  it('returns false if given null as orig', () => {
+    expect(isWikiLink({ id, display, orig: null })).toBe(false)
+  })
+
+  it('returns true if given undefined as orig', () => {
+    expect(isWikiLink({ id, display, orig: undefined })).toBe(true)
+  })
+
+  it('returns false if given true as orig', () => {
+    expect(isWikiLink({ id, display, orig: true })).toBe(false)
+  })
+
+  it('returns false if given false as orig', () => {
+    expect(isWikiLink({ id, display, orig: false })).toBe(false)
+  })
+
+  it('returns false if given a number as orig', () => {
+    expect(isWikiLink({ id, display, orig: 1 })).toBe(false)
+  })
+
+  it('returns true if given a string as orig', () => {
+    expect(isWikiLink({ id, display, orig })).toBe(true)
+  })
+
+  it('returns false if given an array as orig', () => {
+    expect(isWikiLink({ id, display, orig: orig.split('') })).toBe(false)
+  })
+
+  it('returns false if given an object as orig', () => {
+    expect(isWikiLink({ id, display, orig: { orig } })).toBe(false)
   })
 })
