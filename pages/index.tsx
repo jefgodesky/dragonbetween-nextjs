@@ -1,19 +1,22 @@
 import { GetServerSideProps } from 'next'
-import { ReactElement } from 'react'
+import { ReactElement, useState } from 'react'
 import CharacterKnowledge from '../types/CharacterKnowledge'
 import PageHead from '../components/PageHead/PageHead'
 import Header from '../components/Header/Header'
+import getSelectedPOV from '../functions/get-selected-pov'
 import loadCharacterKnowledge from '../functions/load-character-knowledge'
 
 interface HomeProperties {
-  characterKnowledge: CharacterKnowledge
+  knowledge: CharacterKnowledge
 }
 
-export default function Home ({ characterKnowledge }: HomeProperties): ReactElement {
+export default function Home ({ knowledge }: HomeProperties): ReactElement {
+  const [pov, setPOV] = useState('None')
+  const onPOVChange = getSelectedPOV(setPOV)
   return (
     <>
       <PageHead />
-      <Header characterKnowledge={characterKnowledge} />
+      <Header knowledge={knowledge} pov={pov} onPOVChange={onPOVChange} />
       <main className='home'>
         <p><em>This website records the lore of one iteration of the world of <a href='/eberron'>Eberron</a>. There are many Eberrons, but this one is ours.</em></p>
         <section className='current-campaign'>
@@ -27,8 +30,7 @@ export default function Home ({ characterKnowledge }: HomeProperties): ReactElem
 }
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
-  context.res.setHeader('Cache-Control', 'public, s-maxage=900, stale-while-revalidate=150'
-  )
-  const characterKnowledge = await loadCharacterKnowledge()
-  return { props: { characterKnowledge } }
+  context.res.setHeader('Cache-Control', 'public, s-maxage=900, stale-while-revalidate=150')
+  const knowledge = await loadCharacterKnowledge()
+  return { props: { knowledge } }
 }
