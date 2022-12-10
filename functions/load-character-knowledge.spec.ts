@@ -9,6 +9,8 @@ describe('loadCharacterKnowledge', () => {
   const mockedAxios = axios as jest.Mocked<typeof axios>
   mockedAxios.get = jest.fn()
 
+  afterEach(() => mockedAxios.get.mockReset())
+
   it('loads Google Spreadsheet', async () => {
     mockedAxios.get.mockResolvedValue({ data: '' })
     await loadCharacterKnowledge()
