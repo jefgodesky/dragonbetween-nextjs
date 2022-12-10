@@ -7,7 +7,7 @@ interface PossibleEvent {
   }
 }
 
-function setPOV (setter: Function, pov: string) {
+function setPOV (setter: Function, pov: string): void {
   setCookie('POV', pov)
   setter(pov)
 }
