@@ -1,5 +1,5 @@
 const { readdirSync, existsSync, readFileSync, writeFileSync } = require('fs')
-const { resolve  } = require('path')
+const { resolve } = require('path')
 
 const index = {}
 const lore = resolve(__dirname, '../lore')
