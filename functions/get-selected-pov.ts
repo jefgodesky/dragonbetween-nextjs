@@ -1,4 +1,5 @@
 import { setCookie } from 'cookies-next'
+import challengeGM from './challenge-gm'
 
 interface PossibleEvent {
   target?: {
@@ -6,13 +7,16 @@ interface PossibleEvent {
   }
 }
 
+function setPOV (setter: Function, pov: string) {
+  setCookie('POV', pov)
+  setter(pov)
+}
+
 export default function getSelectedPOV (setter: Function) {
   return function (event: PossibleEvent) {
     const val = (event.target as HTMLSelectElement)?.value
-    if (val !== undefined) {
-      setCookie('POV', val)
-      setter(val)
-    }
+    if (val === 'GM' && challengeGM()) setPOV(setter, 'GM')
+    if (val !== 'GM' && val !== undefined) setPOV(setter, val)
   }
 }
 
