@@ -4,7 +4,7 @@ import { isLoreIndexEntry } from './LoreIndexEntry'
 describe('isLoreIndexEntry', () => {
   const clone = rfdc()
   const min = { title: 'Test', text: {}, categories: {} }
-  let cpy: any = clone(min)
+  let cpy: any
 
   beforeEach(() => { cpy = clone(min) })
 
