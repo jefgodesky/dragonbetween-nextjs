@@ -1,3 +1,5 @@
+import { ReactElement } from 'react'
+
 interface PageHeadOGProps {
   title?: string
   path?: string
@@ -5,7 +7,7 @@ interface PageHeadOGProps {
   image?: string
 }
 
-export default function PageHeadOG (props: PageHeadOGProps) {
+export default function PageHeadOG (props: PageHeadOGProps): ReactElement {
   const title = props.title ?? 'The Dragon Between'
   const url = props.path !== undefined ? `http://dragonbetween.net${props.path}` : 'https://dragonbetween.net'
   const description = props.description ?? 'Welcome to Eberron.'

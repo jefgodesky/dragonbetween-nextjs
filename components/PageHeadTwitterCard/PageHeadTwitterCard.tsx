@@ -1,10 +1,12 @@
+import { ReactElement } from 'react'
+
 interface PageHeadTwitterCardProps {
   title?: string
   description?: string
   image?: string
 }
 
-export default function PageHeadTwitterCard (props: PageHeadTwitterCardProps) {
+export default function PageHeadTwitterCard (props: PageHeadTwitterCardProps): ReactElement {
   const title = props.title ?? 'The Dragon Between'
   const description = props.description ?? 'Welcome to Eberron.'
   const image = props.image ?? 'https://dragonbetween.net/img/social.jpg'

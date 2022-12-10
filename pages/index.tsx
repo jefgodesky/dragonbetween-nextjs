@@ -1,7 +1,8 @@
+import { ReactElement } from 'react'
 import PageHead from '../components/PageHead/PageHead'
 import Header from '../components/Header/Header'
 
-export default function Home () {
+export default function Home (): ReactElement {
   return (
     <>
       <PageHead />
