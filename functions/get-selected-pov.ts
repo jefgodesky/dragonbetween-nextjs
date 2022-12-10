@@ -1,3 +1,5 @@
+import { setCookie } from 'cookies-next'
+
 interface PossibleEvent {
   target?: {
     value?: string
@@ -7,7 +9,10 @@ interface PossibleEvent {
 export default function getSelectedPOV (setter: Function) {
   return function (event: PossibleEvent) {
     const val = (event.target as HTMLSelectElement)?.value
-    if (val !== undefined) setter(val)
+    if (val !== undefined) {
+      setCookie('POV', val)
+      setter(val)
+    }
   }
 }
 

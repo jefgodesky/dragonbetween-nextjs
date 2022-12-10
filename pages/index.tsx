@@ -1,5 +1,6 @@
 import { GetServerSideProps } from 'next'
 import { ReactElement, useState } from 'react'
+import { getCookie } from 'cookies-next'
 import CharacterKnowledge from '../types/CharacterKnowledge'
 import PageHead from '../components/PageHead/PageHead'
 import Header from '../components/Header/Header'
@@ -8,10 +9,11 @@ import loadCharacterKnowledge from '../functions/load-character-knowledge'
 
 interface HomeProperties {
   knowledge: CharacterKnowledge
+  initPOV: string
 }
 
-export default function Home ({ knowledge }: HomeProperties): ReactElement {
-  const [pov, setPOV] = useState('None')
+export default function Home ({ knowledge, initPOV }: HomeProperties): ReactElement {
+  const [pov, setPOV] = useState(initPOV)
   const onPOVChange = getSelectedPOV(setPOV)
   return (
     <>
@@ -32,5 +34,6 @@ export default function Home ({ knowledge }: HomeProperties): ReactElement {
 export const getServerSideProps: GetServerSideProps = async (context) => {
   context.res.setHeader('Cache-Control', 'public, s-maxage=900, stale-while-revalidate=150')
   const knowledge = await loadCharacterKnowledge()
-  return { props: { knowledge } }
+  const initPOV = getCookie('POV', { req: context.req }) ?? 'None'
+  return { props: { knowledge, initPOV } }
 }
