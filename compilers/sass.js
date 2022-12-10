@@ -1,5 +1,6 @@
-const { resolve } = require('path')
-const { writeFileSync } = require('fs')
-const sass = require('sass')
+import { resolve } from 'path'
+import { writeFileSync } from 'fs'
+import sass from 'sass'
+
 const compiled = sass.compile(resolve(__dirname, '../scss/index.scss'))
 writeFileSync(resolve(__dirname, '../public/style.css'), compiled.css, { encoding: 'utf8' })

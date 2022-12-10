@@ -1,5 +1,5 @@
-const { readdirSync, existsSync, readFileSync, writeFileSync } = require('fs')
-const { resolve } = require('path')
+import { readdirSync, existsSync, readFileSync, writeFileSync } from 'fs'
+import { resolve } from 'path'
 
 const index = {}
 const lore = resolve(__dirname, '../lore')
