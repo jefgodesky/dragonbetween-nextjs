@@ -4,6 +4,7 @@ describe('isWikiLink', () => {
   const id = 'test'
   const display = 'Test Link'
   const orig = `[[${id} | ${display}]]`
+  const slug = 'test'
 
   it('returns false if given null', () => {
     expect(isWikiLink(null)).toBe(false)
@@ -135,5 +136,37 @@ describe('isWikiLink', () => {
 
   it('returns false if given an object as orig', () => {
     expect(isWikiLink({ id, display, orig: { orig } })).toBe(false)
+  })
+
+  it('returns false if given null as slug', () => {
+    expect(isWikiLink({ id, display, slug: null })).toBe(false)
+  })
+
+  it('returns true if given undefined as slug', () => {
+    expect(isWikiLink({ id, display, slug: undefined })).toBe(true)
+  })
+
+  it('returns false if given true as slug', () => {
+    expect(isWikiLink({ id, display, slug: true })).toBe(false)
+  })
+
+  it('returns false if given false as slug', () => {
+    expect(isWikiLink({ id, display, slug: false })).toBe(false)
+  })
+
+  it('returns false if given a number as slug', () => {
+    expect(isWikiLink({ id, display, slug: 1 })).toBe(false)
+  })
+
+  it('returns true if given a string as slug', () => {
+    expect(isWikiLink({ id, display, slug })).toBe(true)
+  })
+
+  it('returns false if given an array as slug', () => {
+    expect(isWikiLink({ id, display, slug: slug.split('') })).toBe(false)
+  })
+
+  it('returns false if given an object as slug', () => {
+    expect(isWikiLink({ id, display, slug: { slug } })).toBe(false)
   })
 })
