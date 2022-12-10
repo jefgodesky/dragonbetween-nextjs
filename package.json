@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "test": "jest",
     "lint": "next lint",
     "compile:sass": "node compilers/sass.js"
   },
@@ -28,5 +29,14 @@
     "jest-environment-jsdom": "^29.3.1",
     "sass": "^1.56.2",
     "ts-jest": "^29.0.3"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "jest-environment-jsdom",
+    "testMatch": ["**/*.(spec|test).ts?(x)"],
+    "transform": {
+      "^.+\\.ts?$": "ts-jest"
+    },
+    "transformIgnorePatterns": ["<rootDir>/node_modules/"]
   }
 }
