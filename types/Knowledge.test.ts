@@ -1,67 +1,67 @@
-import { isCharacterKnowledge } from './CharacterKnowledge'
+import { isKnowledge } from './Knowledge'
 
-describe('CharacterKnowledge', () => {
+describe('Knowledge', () => {
   it('returns false if given null', () => {
-    expect(isCharacterKnowledge(null)).toBe(false)
+    expect(isKnowledge(null)).toBe(false)
   })
 
   it('returns false if given undefined', () => {
-    expect(isCharacterKnowledge(undefined)).toBe(false)
+    expect(isKnowledge(undefined)).toBe(false)
   })
 
   it('returns false if given false', () => {
-    expect(isCharacterKnowledge(false)).toBe(false)
+    expect(isKnowledge(false)).toBe(false)
   })
 
   it('returns false if given true', () => {
-    expect(isCharacterKnowledge(true)).toBe(false)
+    expect(isKnowledge(true)).toBe(false)
   })
 
   it('returns false if given a number', () => {
-    expect(isCharacterKnowledge(1)).toBe(false)
+    expect(isKnowledge(1)).toBe(false)
   })
 
   it('returns false if given a string', () => {
-    expect(isCharacterKnowledge('true')).toBe(false)
+    expect(isKnowledge('true')).toBe(false)
   })
 
   it('returns false if given an array', () => {
-    expect(isCharacterKnowledge([1, 2, 3])).toBe(false)
+    expect(isKnowledge([1, 2, 3])).toBe(false)
   })
 
   it('returns true if given an empty object', () => {
-    expect(isCharacterKnowledge({})).toBe(true)
+    expect(isKnowledge({})).toBe(true)
   })
 
   it('returns false if given an object with a null property', () => {
-    expect(isCharacterKnowledge({ test: null })).toBe(false)
+    expect(isKnowledge({ test: null })).toBe(false)
   })
 
   it('returns false if given an object with an undefined property', () => {
-    expect(isCharacterKnowledge({ test: undefined })).toBe(false)
+    expect(isKnowledge({ test: undefined })).toBe(false)
   })
 
   it('returns true if given an object with a false property', () => {
-    expect(isCharacterKnowledge({ test: false })).toBe(true)
+    expect(isKnowledge({ test: false })).toBe(true)
   })
 
   it('returns true if given an object with a true property', () => {
-    expect(isCharacterKnowledge({ test: true })).toBe(true)
+    expect(isKnowledge({ test: true })).toBe(true)
   })
 
   it('returns false if given an object with a number property', () => {
-    expect(isCharacterKnowledge({ test: 1 })).toBe(false)
+    expect(isKnowledge({ test: 1 })).toBe(false)
   })
 
   it('returns false if given an object with a string property', () => {
-    expect(isCharacterKnowledge({ test: 'true' })).toBe(false)
+    expect(isKnowledge({ test: 'true' })).toBe(false)
   })
 
   it('returns false if given an object with an array property', () => {
-    expect(isCharacterKnowledge({ test: [1, 2, 3] })).toBe(false)
+    expect(isKnowledge({ test: [1, 2, 3] })).toBe(false)
   })
 
   it('returns false if given an object with an object property', () => {
-    expect(isCharacterKnowledge({ test: {} })).toBe(false)
+    expect(isKnowledge({ test: {} })).toBe(false)
   })
 })

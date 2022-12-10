@@ -1,8 +1,8 @@
-interface CharacterKnowledge {
+interface Knowledge {
   [key: string]: boolean
 }
 
-const isCharacterKnowledge = (obj: any): obj is CharacterKnowledge => {
+const isKnowledge = (obj: any): obj is Knowledge => {
   if (obj === null) return false
   if (typeof obj !== 'object') return false
   for (const key of Object.keys(obj)) {
@@ -11,5 +11,5 @@ const isCharacterKnowledge = (obj: any): obj is CharacterKnowledge => {
   return true
 }
 
-export default CharacterKnowledge
-export { isCharacterKnowledge }
+export default Knowledge
+export { isKnowledge }
