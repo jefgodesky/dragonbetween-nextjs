@@ -8,7 +8,8 @@
     "start": "next start",
     "test": "jest",
     "lint": "ts-standard",
-    "compile:sass": "node compilers/sass.js"
+    "compile:sass": "node compilers/sass.js",
+    "compile:lore": "node compilers/lore-index.js"
   },
   "dependencies": {
     "@types/node": "18.11.12",
