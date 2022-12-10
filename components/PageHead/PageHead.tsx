@@ -1,6 +1,5 @@
 import { ReactElement } from 'react'
 import Head from 'next/head'
-import PageHeadGoogleFonts from '../PageHeadGoogleFonts/PageHeadGoogleFonts'
 import PageHeadTwitterCard from '../PageHeadTwitterCard/PageHeadTwitterCard'
 import PageHeadOG from '../PageHeadOG/PageHeadOG'
 
@@ -19,9 +18,6 @@ export default function PageHead (props: PageHeadProps): ReactElement {
     <Head>
       <title>{title}</title>
       <meta name='description' content={description} />
-      <link rel='icon' href='/favicon.ico' />
-      <link rel='stylesheet' href='/style.css' />
-      <PageHeadGoogleFonts />
       <PageHeadTwitterCard {...props} />
       <PageHeadOG {...props} />
     </Head>
