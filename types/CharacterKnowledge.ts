@@ -1,6 +1,6 @@
 import Knowledge, { isKnowledge } from './Knowledge'
 
-type CharacterKnowledge = {
+interface CharacterKnowledge {
   [name: string]: Knowledge
 }
 
