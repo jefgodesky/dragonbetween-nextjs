@@ -13,7 +13,7 @@ export default function Home ({ characterKnowledge }: HomeProperties): ReactElem
   return (
     <>
       <PageHead />
-      <Header />
+      <Header characterKnowledge={characterKnowledge} />
       <main className='home'>
         <p><em>This website records the lore of one iteration of the world of <a href='/eberron'>Eberron</a>. There are many Eberrons, but this one is ours.</em></p>
         <section className='current-campaign'>
