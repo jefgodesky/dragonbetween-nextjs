@@ -1,8 +1,15 @@
+import { GetServerSideProps } from 'next'
 import { ReactElement } from 'react'
+import CharacterKnowledge from '../types/CharacterKnowledge'
 import PageHead from '../components/PageHead/PageHead'
 import Header from '../components/Header/Header'
+import loadCharacterKnowledge from '../functions/load-character-knowledge'
 
-export default function Home (): ReactElement {
+interface HomeProperties {
+  characterKnowledge: CharacterKnowledge
+}
+
+export default function Home ({ characterKnowledge }: HomeProperties): ReactElement {
   return (
     <>
       <PageHead />
@@ -17,4 +24,11 @@ export default function Home (): ReactElement {
       </main>
     </>
   )
+}
+
+export const getServerSideProps: GetServerSideProps = async (context) => {
+  context.res.setHeader('Cache-Control', 'public, s-maxage=900, stale-while-revalidate=150'
+  )
+  const characterKnowledge = await loadCharacterKnowledge()
+  return { props: { characterKnowledge } }
 }
