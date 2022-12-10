@@ -1,16 +1,18 @@
-import rfdc from 'rfdc'
 import CharacterKnowledge from '../types/CharacterKnowledge'
 import getSecrets from './get-secrets'
 
-const clone = rfdc()
+interface AddSpecialCharacterOptions {
+  knows?: boolean
+  top?: boolean
+}
 
-const addSpecialCharacter = (before: CharacterKnowledge, name: string, knows = false): CharacterKnowledge => {
-  const after = clone(before)
-  after[name] = {}
+const addSpecialCharacter = (before: CharacterKnowledge, name: string, options?: AddSpecialCharacterOptions): CharacterKnowledge => {
+  const alone: CharacterKnowledge = {}
+  alone[name] = {}
   for (const secret of getSecrets(before)) {
-    after[name][secret] = knows
+    alone[name][secret] = options?.knows === true
   }
-  return after
+  return options?.top === true ? Object.assign({}, alone, before) : Object.assign({}, before, alone)
 }
 
 export default addSpecialCharacter

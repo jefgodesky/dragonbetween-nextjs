@@ -19,8 +19,18 @@ describe('addSpecialCharacter', () => {
   })
 
   it('can add a new character who knows everything', () => {
-    const actual = addSpecialCharacter(knowledge, 'Debra', true)
+    const actual = addSpecialCharacter(knowledge, 'Debra', { knows: true })
     expect(actual.Debra.secret1).toBe(true)
     expect(actual.Debra.secret2).toBe(true)
+  })
+
+  it('adds a new character to the end of the list', () => {
+    const actual = addSpecialCharacter(knowledge, 'Debra')
+    expect(Object.keys(actual).join(' ')).toBe('Alice Bob Charlie Debra')
+  })
+
+  it('can add a new character to the top of the list', () => {
+    const actual = addSpecialCharacter(knowledge, 'Debra', { top: true })
+    expect(Object.keys(actual).join(' ')).toBe('Debra Alice Bob Charlie')
   })
 })
