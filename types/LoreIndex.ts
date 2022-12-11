@@ -7,11 +7,9 @@ interface LoreIndex {
 const isLoreIndex = (obj: any): obj is LoreIndex => {
   if (obj === null) return false
   if (typeof obj !== 'object' || Array.isArray(obj)) return false
-  const checkEntries = Object.values(obj)
+  return Object.values(obj)
     .map(entry => isLoreIndexEntry(entry))
     .reduce((acc, curr) => acc && curr, true)
-  if (!checkEntries) return false
-  return true
 }
 
 export default LoreIndex
