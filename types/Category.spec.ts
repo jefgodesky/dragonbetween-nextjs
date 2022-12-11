@@ -6,7 +6,7 @@ describe('isCategory', () => {
   const main = 'tests'
   const secret = 'Secret1'
   const slug = 'tests'
-  const subcategories = ['unit-tests', 'integration-tests']
+  const subcategories = { 'unit-tests': null, 'integration-tests': 'IntegrationTests' }
 
   it('returns false if given null', () => {
     expect(isCategory(null)).toBe(false)
@@ -221,46 +221,50 @@ describe('isCategory', () => {
   })
 
   it('returns false if given a string for subcategories', () => {
-    expect(isCategory({ title, subcategories: subcategories.join(';') })).toBe(false)
+    expect(isCategory({ title, subcategories: Object.keys(subcategories).join(';') })).toBe(false)
   })
 
-  it('returns true if given an empty array for subcategories', () => {
-    expect(isCategory({ title, subcategories: [] })).toBe(true)
+  it('returns false if given an array for subcategories', () => {
+    expect(isCategory({ title, subcategories: Object.keys(subcategories) })).toBe(false)
   })
 
-  it('returns false if given an array that includes null for subcategories', () => {
-    expect(isCategory({ title, subcategories: [...subcategories, null] })).toBe(false)
-  })
-
-  it('returns false if given an array that includes undefined for subcategories', () => {
-    expect(isCategory({ title, subcategories: [...subcategories, undefined] })).toBe(false)
-  })
-
-  it('returns false if given an array that includes true for subcategories', () => {
-    expect(isCategory({ title, subcategories: [...subcategories, true] })).toBe(false)
-  })
-
-  it('returns false if given an array that includes false for subcategories', () => {
-    expect(isCategory({ title, subcategories: [...subcategories, false] })).toBe(false)
-  })
-
-  it('returns false if given an array that includes a number for subcategories', () => {
-    expect(isCategory({ title, subcategories: [...subcategories, 1] })).toBe(false)
-  })
-
-  it('returns true if given an array of strings for subcategories', () => {
-    expect(isCategory({ title, subcategories: [...subcategories] })).toBe(true)
-  })
-
-  it('returns false if given an array that includes arrays for subcategories', () => {
-    expect(isCategory({ title, subcategories: [...subcategories, []] })).toBe(false)
-  })
-
-  it('returns false if given an array that includes objects for subcategories', () => {
-    expect(isCategory({ title, subcategories: [...subcategories, {}] })).toBe(false)
-  })
-
-  it('returns false if given an object for subcategories', () => {
+  it('returns true if given an empty object for subcategories', () => {
     expect(isCategory({ title, subcategories: { subcategories } })).toBe(false)
+  })
+
+  it('returns true if given a null subcategory', () => {
+    expect(isCategory({ title, subcategories: { test: null } })).toBe(true)
+  })
+
+  it('returns false if given an undefined subcategory', () => {
+    expect(isCategory({ title, subcategories: { test: undefined } })).toBe(false)
+  })
+
+  it('returns false if given a true subcategory', () => {
+    expect(isCategory({ title, subcategories: { test: true } })).toBe(false)
+  })
+
+  it('returns false if given a false subcategory', () => {
+    expect(isCategory({ title, subcategories: { test: false } })).toBe(false)
+  })
+
+  it('returns false if given a number subcategory', () => {
+    expect(isCategory({ title, subcategories: { test: 1 } })).toBe(false)
+  })
+
+  it('returns true if given a string subcategory', () => {
+    expect(isCategory({ title, subcategories: { test: 'test' } })).toBe(true)
+  })
+
+  it('returns false if given an array subcategory', () => {
+    expect(isCategory({ title, subcategories: { test: [] } })).toBe(false)
+  })
+
+  it('returns false if given an object subcategory', () => {
+    expect(isCategory({ title, subcategories: { test: { subcategories } } })).toBe(false)
+  })
+
+  it('returns true if given a mix of null and string subcategories', () => {
+    expect(isCategory({ title, subcategories })).toBe(true)
   })
 })

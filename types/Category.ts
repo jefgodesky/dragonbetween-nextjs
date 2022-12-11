@@ -4,7 +4,9 @@ interface Category {
   main?: string
   secret?: string
   slug?: string
-  subcategories?: string[]
+  subcategories?: {
+    [slug: string]: string | null
+  }
 }
 
 const isCategory = (obj: any): obj is Category => {
@@ -18,13 +20,12 @@ const isCategory = (obj: any): obj is Category => {
   if (!(slug === undefined || typeof slug === 'string')) return false
 
   if (subcategories === undefined) return true
-  if (!Array.isArray(subcategories)) return false
-  const subcatCheck = subcategories
-    .map(el => typeof el === 'string')
+  if (subcategories === null) return false
+  if (typeof subcategories !== 'object' || Array.isArray(subcategories)) return false
+  const checkCats = Object.values(subcategories)
+    .map(val => val === null || typeof val === 'string')
     .reduce((acc, curr) => acc && curr, true)
-  if (!subcatCheck) return false
-
-  return true
+  return checkCats
 }
 
 export default Category
