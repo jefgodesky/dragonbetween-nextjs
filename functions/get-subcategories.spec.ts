@@ -1,4 +1,4 @@
-import { isCategory } from '../types/Category'
+import Category, { isCategory } from '../types/Category'
 import getSubcategories from './get-subcategories'
 
 describe('getSubcategories', () => {
@@ -13,7 +13,7 @@ describe('getSubcategories', () => {
     expect(Array.isArray(actual)).toBe(true)
     expect(actual).toHaveLength(slugs.length)
     for (const category of actual) expect(isCategory(category)).toBe(true)
-    expect(actual.map(cat => cat.slug).join(' ')).toEqual(slugs.join(' '))
+    expect(actual.map((cat: Category) => cat.slug).join(' ')).toEqual(slugs.join(' '))
   }
 
   it('returns subcategories', () => {
