@@ -62,13 +62,13 @@ describe('getLoreIndexEntryCategories', () => {
     expect(actual.map(cat => cat.slug).join(', ')).toBe('test3')
   })
 
-  it('doesn\'t include categories the entry is explicitly the main for if it\s a secret', () => {
+  it('doesn\'t include categories the entry is explicitly the main for if it\'s a secret', () => {
     const entry = { title: 'Test', slug: 'test4', text: {} }
     const actual = getLoreIndexEntryCategories(entry, {}, categories)
     expect(actual.map(cat => cat.slug).join(', ')).toBe('')
   })
 
-  it('includes categories the entry is explicitly the main for if it\s a secret you know', () => {
+  it('includes categories the entry is explicitly the main for if it\'s a secret you know', () => {
     const entry = { title: 'Test', slug: 'test4', text: {} }
     const actual = getLoreIndexEntryCategories(entry, { TestSecret: true }, categories)
     expect(actual.map(cat => cat.slug).join(', ')).toBe('test4')
