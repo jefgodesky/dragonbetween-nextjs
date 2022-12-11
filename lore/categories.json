@@ -2,6 +2,15 @@
   "aberrations": {
     "title": "Aberrations"
   },
+  "age-of-demons": {
+    "title": "Age of Demons"
+  },
+  "age-of-giants": {
+    "title": "Age of Giants"
+  },
+  "age-of-monsters": {
+    "title": "Age of Monsters"
+  },
   "beasts": {
     "title": "Beasts",
     "subcategories": [
@@ -83,6 +92,9 @@
     "title": "Metallic Dragons",
     "secret": "Dragons2"
   },
+  "eberron": {
+    "title": "Eberron"
+  },
   "elementals": {
     "title": "Elementals",
     "subcategories": [
@@ -112,6 +124,15 @@
   "goblinoids": {
     "title": "Goblinoids"
   },
+  "history": {
+    "title": "History",
+    "subcategories": [
+      "age-of-demons",
+      "age-of-giants",
+      "age-of-monsters",
+      "modern-age"
+    ]
+  },
   "humanoids": {
     "title": "Humanoids",
     "subcategories": [
@@ -136,6 +157,15 @@
   },
   "mabar": {
     "title": "Mabar"
+  },
+  "material-plane": {
+    "title": "Material Plane",
+    "subcategories": [
+      "eberron"
+    ]
+  },
+  "Modern Age": {
+    "title": "Modern Age"
   },
   "monstrosities": {
     "title": "Monstrosities"
