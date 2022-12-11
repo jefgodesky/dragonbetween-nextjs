@@ -1,5 +1,3 @@
-## Eberron
-
 **Eberron** is the {{if !LifeOnTheMoons}}sole 
 inhabited{{/if}}{{if LifeOnTheMoons}}central{{/if}}
 planet of the [Material Plane](/planes/material).

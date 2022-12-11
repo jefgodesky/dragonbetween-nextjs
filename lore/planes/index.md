@@ -1,5 +1,3 @@
-## Planes
-
 The **planes** are the various 
 domains and realms that make up the cosmos. Sages often 
 categorize them into the

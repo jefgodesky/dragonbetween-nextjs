@@ -1,5 +1,3 @@
-## Changelings
-
 **Changelings** are a species of [[humanoids]]
 capable of changing their appearance at will.
 For changelings, changing height (within a few

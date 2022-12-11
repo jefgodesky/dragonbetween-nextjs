@@ -1,5 +1,3 @@
-## Elves
-
 **Elves** are exceptionally long-lived
 [[humanoids]] that have habituated to the
 [[material plane]], though they are descended

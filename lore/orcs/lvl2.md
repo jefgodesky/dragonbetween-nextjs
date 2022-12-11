@@ -1,5 +1,3 @@
-## Orcs
-
 **Orcs** are a species of [[humanoids]] native
 to [[Khorvaire]] noted for their primal
 connection to [[Eberron]] and deep passions.

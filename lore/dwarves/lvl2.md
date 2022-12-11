@@ -1,5 +1,3 @@
-## Dwarves
-
 **Dwarves** are a species of [[humanoids]]
 marked by small stature (by humanoid standards),
 a stocky build, a hearty constitution, and a

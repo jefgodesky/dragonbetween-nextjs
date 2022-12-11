@@ -1,5 +1,3 @@
-## Goblinoids
-
 **Goblinoids** are a subgroup of [[humanoids]]
 native to [[Khorvaire]] consisting of [[bugbears]],
 [[goblins]], and [[hobgoblins]]. This is a

@@ -1,5 +1,3 @@
-## Humanoids
-
 **Humanoids** are [[creatures]] marked by
 bipedalism, two pairs of limbs, a head, remarkably
 little sexual dimorphism, high intelligence, and

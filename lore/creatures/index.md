@@ -1,5 +1,3 @@
-## Creatures
-
 A **creature**, in [[Eberron]], is any living
 being, not just an animal. It is a category that
 includes [[plants]] as well as such supernatural

@@ -1,5 +1,3 @@
-## Halflings
-
 **Halflings** are a species of [[humanoids]]
 native to the [[Talenta Plains]] of [[Khorvaire]]
 remarkable for their short stature.

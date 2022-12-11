@@ -1,5 +1,3 @@
-## Gnomes
-
 **Gnomes** are a species of [[humanoids]] native
 to [[Thelanis]] and naturalized to [[Khorvaire]]
 marked by their small stature and [[fey]]

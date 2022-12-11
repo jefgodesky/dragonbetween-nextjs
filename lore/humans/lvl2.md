@@ -1,5 +1,3 @@
-## Humans
-
 **Humans** are a widespread species of
 [[humanoids]] native to [[Sarlona]].
 {{if KhorvaireHistory1}}The first humans in

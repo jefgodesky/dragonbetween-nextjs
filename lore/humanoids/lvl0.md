@@ -1,5 +1,3 @@
-## Humanoids
-
 **Humanoids** are [[creatures]] marked by
 bipedalism, two pairs of limbs, a head, high
 intelligence, and complex social organization.

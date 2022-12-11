@@ -1,5 +1,3 @@
-## History
-
 **History** is the study of the past. Sages 
 refer to a number of historical ages:
 

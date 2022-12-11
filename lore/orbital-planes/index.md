@@ -1,5 +1,3 @@
-## Orbital Planes
-
 The thirteen **orbital planes** or **true 
 planes** are what most people mean when they 
 refer to “[the planes](/planes).” These planes

@@ -1,5 +1,3 @@
-## The Modern Age
-
 The **Modern Age** covers the past 5,000 years 
 of [Eberron’s](/eberron) [history](/history), 
 since the collapse of
