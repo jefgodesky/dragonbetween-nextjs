@@ -13,10 +13,10 @@
   },
   "beasts": {
     "title": "Beasts",
-    "subcategories": [
-      "birds",
-      "dinosaurs"
-    ]
+    "subcategories": {
+      "birds": null,
+      "dinosaurs": null
+    }
   },
   "birds": {
     "title": "Birds"
@@ -29,29 +29,29 @@
   },
   "creatures": {
     "title": "Creatures",
-    "subcategories": [
-      "creatures-by-type"
-    ]
+    "subcategories": {
+      "creatures-by-type": null
+    }
   },
   "creatures-by-type": {
     "title": "Creatures by Type",
     "main": "creatures",
-    "subcategories": [
-      "aberrations",
-      "beasts",
-      "celestials",
-      "constructs",
-      "dragonkin",
-      "elementals",
-      "fey",
-      "fiends",
-      "giants",
-      "humanoids",
-      "monstrosities",
-      "oozes",
-      "plants",
-      "undead"
-    ]
+    "subcategories": {
+      "aberrations": null,
+      "beasts": null,
+      "celestials": null,
+      "constructs": null,
+      "dragonkin": null,
+      "elementals": null,
+      "fey": null,
+      "fiends": null,
+      "giants": null,
+      "humanoids": null,
+      "monstrosities": null,
+      "oozes": null,
+      "plants": null,
+      "undead": null
+    }
   },
   "daanvi": {
     "title": "daanvi"
@@ -73,16 +73,16 @@
   },
   "dragonkin": {
     "title": "Dragonkin",
-    "subcategories": [
-      "dragons"
-    ]
+    "subcategories": {
+      "dragons": null
+    }
   },
   "dragons": {
     "title": "Dragons",
-    "subcategories": [
-      "dragons-chromatic",
-      "dragons-metallic"
-    ]
+    "subcategories": {
+      "dragons-chromatic": null,
+      "dragons-metallic": null
+    }
   },
   "dragon-chromatic": {
     "title": "Chromatic Dragons",
@@ -97,9 +97,9 @@
   },
   "elementals": {
     "title": "Elementals",
-    "subcategories": [
-      "genies"
-    ]
+    "subcategories": {
+      "genies": null
+    }
   },
   "fernia": {
     "title": "Fernia"
@@ -109,11 +109,11 @@
   },
   "fiends": {
     "title": "Fiends",
-    "subcategories": [
-      "demons",
-      "devils",
-      "yugoloths"
-    ]
+    "subcategories": {
+      "demons": null,
+      "devils": null,
+      "yugoloths": null
+    }
   },
   "genies": {
     "title": "Genies"
@@ -126,18 +126,18 @@
   },
   "history": {
     "title": "History",
-    "subcategories": [
-      "age-of-demons",
-      "age-of-giants",
-      "age-of-monsters",
-      "modern-age"
-    ]
+    "subcategories": {
+      "age-of-demons": null,
+      "age-of-giants": null,
+      "age-of-monsters": null,
+      "modern-age": null
+    }
   },
   "humanoids": {
     "title": "Humanoids",
-    "subcategories": [
-      "goblinoids"
-    ]
+    "subcategories": {
+      "goblinoids": null
+    }
   },
   "irian": {
     "title": "Irian"
@@ -150,19 +150,19 @@
   },
   "liminal-planes": {
     "title": "Liminal Planes",
-    "subcategories": [
-      "astral-plane",
-      "ethereal-plane"
-    ]
+    "subcategories": {
+      "astral-plane": null,
+      "ethereal-plane": null
+    }
   },
   "mabar": {
     "title": "Mabar"
   },
   "material-plane": {
     "title": "Material Plane",
-    "subcategories": [
-      "eberron"
-    ]
+    "subcategories": {
+      "eberron": null
+    }
   },
   "Modern Age": {
     "title": "Modern Age"
@@ -175,34 +175,34 @@
   },
   "orbital-planes": {
     "title": "Orbital Planes",
-    "subcategories": [
-      "daanvi",
-      "dal-quor",
-      "dolurrh",
-      "fernia",
-      "irian",
-      "kythri",
-      "lamannia",
-      "mabar",
-      "risia",
-      "shavarath",
-      "syrania",
-      "thelanis",
-      "xoriat"
-    ]
+    "subcategories": {
+      "daanvi": null,
+      "dal-quor": null,
+      "dolurrh": null,
+      "fernia": null,
+      "irian": null,
+      "kythri": null,
+      "lamannia": null,
+      "mabar": null,
+      "risia": null,
+      "shavarath": null,
+      "syrania": null,
+      "thelanis": null,
+      "xoriat": null
+    }
   },
   "planes": {
     "title": "Planes",
-    "subcategories": [
-      "orbital-planes",
-      "liminal-planes"
-    ]
+    "subcategories": {
+      "orbital-planes": null,
+      "liminal-planes": null
+    }
   },
   "plants": {
     "title": "Plants",
-    "subcategories": [
-      "trees"
-    ]
+    "subcategories": {
+      "trees": null
+    }
   },
   "risia": {
     "title": "Risia"
