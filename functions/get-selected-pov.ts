@@ -1,3 +1,4 @@
+import Router from 'next/router'
 import { setCookie } from 'cookies-next'
 import challengeGM from './challenge-gm'
 
@@ -10,6 +11,7 @@ interface PossibleEvent {
 function setPOV (setter: Function, pov: string): void {
   setCookie('POV', pov)
   setter(pov)
+  Router.reload()
 }
 
 export default function getSelectedPOV (setter: Function) {
