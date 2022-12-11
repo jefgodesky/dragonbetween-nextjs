@@ -79,6 +79,46 @@ describe('isLoreIndexEntry', () => {
     expect(isLoreIndexEntry(cpy)).toBe(false)
   })
 
+  it('returns false if given null for slug', () => {
+    cpy.slug = null
+    expect(isLoreIndexEntry(cpy)).toBe(false)
+  })
+
+  it('returns true if given undefined for slug', () => {
+    cpy.slug = undefined
+    expect(isLoreIndexEntry(cpy)).toBe(true)
+  })
+
+  it('returns false if given true for slug', () => {
+    cpy.slug = true
+    expect(isLoreIndexEntry(cpy)).toBe(false)
+  })
+
+  it('returns false if given false for slug', () => {
+    cpy.slug = false
+    expect(isLoreIndexEntry(cpy)).toBe(false)
+  })
+
+  it('returns false if given a number for slug', () => {
+    cpy.slug = 1
+    expect(isLoreIndexEntry(cpy)).toBe(false)
+  })
+
+  it('returns true if given a string for slug', () => {
+    cpy.slug = 'Test'
+    expect(isLoreIndexEntry(cpy)).toBe(true)
+  })
+
+  it('returns false if given an array for slug', () => {
+    cpy.slug = ['T', 'e', 's', 't']
+    expect(isLoreIndexEntry(cpy)).toBe(false)
+  })
+
+  it('returns false if given an object for slug', () => {
+    cpy.slug = { text: 'test' }
+    expect(isLoreIndexEntry(cpy)).toBe(false)
+  })
+
   it('returns false if given null for sort', () => {
     cpy.sort = null
     expect(isLoreIndexEntry(cpy)).toBe(false)

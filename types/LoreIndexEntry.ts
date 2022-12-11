@@ -1,5 +1,6 @@
 interface LoreIndexEntry {
   title: string
+  slug?: string
   sort?: string
   secret?: string
   description?: string
@@ -15,8 +16,9 @@ interface LoreIndexEntry {
 const isLoreIndexEntry = (obj: any): obj is LoreIndexEntry => {
   if (obj === null) return false
   if (typeof obj !== 'object' || Array.isArray(obj)) return false
-  const { title, sort, secret, description, image, text, categories } = obj
+  const { title, slug, sort, secret, description, image, text, categories } = obj
   if (typeof title !== 'string') return false
+  if (!(slug === undefined || typeof slug === 'string')) return false
   if (!(sort === undefined || typeof sort === 'string')) return false
   if (!(secret === undefined || typeof secret === 'string')) return false
   if (!(description === undefined || typeof description === 'string')) return false
