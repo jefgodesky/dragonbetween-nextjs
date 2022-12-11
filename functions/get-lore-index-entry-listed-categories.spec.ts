@@ -12,35 +12,35 @@ describe('getLoreIndexEntryListedCategories', () => {
   it('returns categories listed', () => {
     const categories = { 'test-cat': { title: 'Test Category' } }
     const entry = { title: 'Test', text: {}, categories: { 'test-cat': null } }
-    const actual = getLoreIndexEntryListedCategories(entry, categories, {})
+    const actual = getLoreIndexEntryListedCategories(entry, {}, categories)
     expectSingleCat(actual, categories['test-cat'].title)
   })
 
   it('doesn\'t return categories that are secret', () => {
     const categories = { 'test-cat': { title: 'Test Category' } }
     const entry = { title: 'Test', text: {}, categories: { 'test-cat': 'TestSecret' } }
-    const actual = getLoreIndexEntryListedCategories(entry, categories, {})
+    const actual = getLoreIndexEntryListedCategories(entry, {}, categories)
     expect(actual).toHaveLength(0)
   })
 
   it('returns categories that are secrets you know', () => {
     const categories = { 'test-cat': { title: 'Test Category' } }
     const entry = { title: 'Test', text: {}, categories: { 'test-cat': 'TestSecret' } }
-    const actual = getLoreIndexEntryListedCategories(entry, categories, { TestSecret: true })
+    const actual = getLoreIndexEntryListedCategories(entry, { TestSecret: true }, categories)
     expectSingleCat(actual, categories['test-cat'].title)
   })
 
   it('doesn\'t return secret categories', () => {
     const categories = { 'test-cat': { title: 'Test Category', secret: 'TestSecret' } }
     const entry = { title: 'Test', text: {}, categories: { 'test-cat': null } }
-    const actual = getLoreIndexEntryListedCategories(entry, categories, {})
+    const actual = getLoreIndexEntryListedCategories(entry, {}, categories)
     expect(actual).toHaveLength(0)
   })
 
   it('returns categories that are secrets you know', () => {
     const categories = { 'test-cat': { title: 'Test Category', secret: 'TestSecret' } }
     const entry = { title: 'Test', text: {}, categories: { 'test-cat': null } }
-    const actual = getLoreIndexEntryListedCategories(entry, categories, { TestSecret: true })
+    const actual = getLoreIndexEntryListedCategories(entry, { TestSecret: true }, categories)
     expectSingleCat(actual, categories['test-cat'].title)
   })
 })

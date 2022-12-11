@@ -4,8 +4,9 @@ import Knowledge from '../types/Knowledge'
 import LoreIndexEntry from '../types/LoreIndexEntry'
 import addSlugToCategory from './add-slug-to-category'
 import clear from './clear'
+import json from '../lore/categories.json'
 
-export default function getLoreIndexEntryListedCategories (entry: LoreIndexEntry, categories: Categories, knowledge: Knowledge): Category[] {
+export default function getLoreIndexEntryListedCategories (entry: LoreIndexEntry, knowledge: Knowledge, categories: Categories = json): Category[] {
   const cats = entry.categories === undefined ? {} : entry.categories
   return Object.keys(cats)
     .filter(cat => clear(knowledge, cats[cat] ?? 'true'))
