@@ -7,21 +7,21 @@ describe('getLoreIndexEntry', () => {
   }
 
   it('finds an entry by slug', () => {
-    const actual = getLoreIndexEntry(index, 'test')
+    const actual = getLoreIndexEntry('test', index)
     expect(isLoreIndexEntry(actual)).toBe(true)
     expect(actual?.title).toBe(index.test.title)
     expect(actual?.slug).toBe('test')
   })
 
   it('finds an entry by title', () => {
-    const actual = getLoreIndexEntry(index, index.test.title)
+    const actual = getLoreIndexEntry(index.test.title, index)
     expect(isLoreIndexEntry(actual)).toBe(true)
     expect(actual?.title).toBe(index.test.title)
     expect(actual?.slug).toBe('test')
   })
 
   it('returns null if nothing matches', () => {
-    const actual = getLoreIndexEntry(index, 'nope')
+    const actual = getLoreIndexEntry('nope', index)
     expect(actual).toBeNull()
   })
 })

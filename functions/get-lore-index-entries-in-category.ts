@@ -5,8 +5,9 @@ import LoreIndexEntry from '../types/LoreIndexEntry'
 import { isLoreIndexEntryWithCategories } from '../types/LoreIndexEntryWithCategories'
 import addSlugToLoreIndexEntry from './add-slug-to-lore-index-entry'
 import clear from './clear'
+import json from '../lore/index.json'
 
-export default function getLoreIndexEntriesInCategory (category: Category, index: LoreIndex, knowledge: Knowledge): LoreIndexEntry[] {
+export default function getLoreIndexEntriesInCategory (category: Category, knowledge: Knowledge, index: LoreIndex = json): LoreIndexEntry[] {
   const { slug } = category
   if (slug === undefined) return []
   return Object.keys(index)

@@ -22,22 +22,22 @@ describe('getLoreIndexEntriesInCategory', () => {
   }
 
   it('returns an empty arry if the category has no slug', () => {
-    const actual = getLoreIndexEntriesInCategory(unslugged, index, {})
+    const actual = getLoreIndexEntriesInCategory(unslugged, {}, index)
     expect(JSON.stringify(actual)).toEqual('[]')
   })
 
   it('returns the pages in a category that you know about', () => {
-    const actual = getLoreIndexEntriesInCategory(cat1, index, {})
+    const actual = getLoreIndexEntriesInCategory(cat1, {}, index)
     expectEntires(actual, ['in-cat1', 'in-cat12'])
   })
 
   it('returns pages that are secretly in a category if you know that', () => {
-    const actual = getLoreIndexEntriesInCategory(cat1, index, { TestSecret: true })
+    const actual = getLoreIndexEntriesInCategory(cat1, { TestSecret: true }, index)
     expectEntires(actual, ['in-cat1', 'in-cat12', 'secret-cat1'])
   })
 
   it('returns secret pages that you know about in a category', () => {
-    const actual = getLoreIndexEntriesInCategory(cat2, index, { TestSecret: true })
+    const actual = getLoreIndexEntriesInCategory(cat2, { TestSecret: true }, index)
     expectEntires(actual, ['in-cat2', 'in-cat12', 'cat2-secret'])
   })
 })
