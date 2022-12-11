@@ -7,7 +7,7 @@ interface LoreIndexEntry {
   text: {
     [secret: string]: string
   }
-  categories: {
+  categories?: {
     [category: string]: string | null
   }
 }
@@ -21,16 +21,22 @@ const isLoreIndexEntry = (obj: any): obj is LoreIndexEntry => {
   if (!(secret === undefined || typeof secret === 'string')) return false
   if (!(description === undefined || typeof description === 'string')) return false
   if (!(image === undefined || typeof image === 'string')) return false
-  if (text === null || categories === null) return false
+
+  if (text === null) return false
   if (typeof text !== 'object' || Array.isArray(text)) return false
-  if (typeof categories !== 'object' || Array.isArray(categories)) return false
   const textCheck = Object.values(text)
     .map(text => typeof text === 'string')
     .reduce((acc, curr) => acc && curr, true)
+  if (!textCheck) return false
+
+  if (categories === undefined) return true
+  if (categories === null) return false
+  if (typeof categories !== 'object' || Array.isArray(categories)) return false
   const catsCheck = Object.values(categories)
     .map(cat => (cat === null || typeof cat === 'string'))
     .reduce((acc, curr) => acc && curr, true)
-  if (!textCheck || !catsCheck) return false
+  if (!catsCheck) return false
+
   return true
 }
 

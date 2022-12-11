@@ -3,7 +3,7 @@ import { isLoreIndexEntry } from './LoreIndexEntry'
 
 describe('isLoreIndexEntry', () => {
   const clone = rfdc()
-  const min = { title: 'Test', text: {}, categories: {} }
+  const min = { title: 'Test', text: {} }
   let cpy: any
 
   beforeEach(() => { cpy = clone(min) })
@@ -324,19 +324,14 @@ describe('isLoreIndexEntry', () => {
     expect(isLoreIndexEntry(cpy)).toBe(false)
   })
 
-  it('returns false if categories is not provided', () => {
-    delete cpy.categories
-    expect(isLoreIndexEntry(cpy)).toBe(false)
-  })
-
   it('returns false if categories is null', () => {
     cpy.categories = null
     expect(isLoreIndexEntry(cpy)).toBe(false)
   })
 
-  it('returns false if categories is undefined', () => {
+  it('returns true if categories is undefined', () => {
     cpy.categories = undefined
-    expect(isLoreIndexEntry(cpy)).toBe(false)
+    expect(isLoreIndexEntry(cpy)).toBe(true)
   })
 
   it('returns false if categories is true', () => {
