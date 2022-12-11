@@ -1,8 +1,10 @@
 import { readdirSync, existsSync, readFileSync, writeFileSync } from 'fs'
-import { resolve } from 'path'
+import { dirname, resolve } from 'path'
+import { fileURLToPath } from 'url'
 
 const index = {}
-const lore = resolve(__dirname, '../lore')
+const dir = dirname(fileURLToPath(import.meta.url))
+const lore = resolve(dir, '../lore')
 const indices = readdirSync(lore)
   .map(dir => resolve(lore, dir, './index.json'))
   .filter(index => existsSync(index))

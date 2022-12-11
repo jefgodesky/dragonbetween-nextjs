@@ -9,8 +9,8 @@
     "test": "jest --detectOpenHandles",
     "lint": "ts-standard",
     "compile": "npm-run-all compile:sass compile:lore",
-    "compile:sass": "node compilers/sass.js",
-    "compile:lore": "node compilers/lore-index.js"
+    "compile:sass": "node compilers/sass.mjs",
+    "compile:lore": "node compilers/lore-index.mjs"
   },
   "dependencies": {
     "@bluemarblepayroll/logicality": "^2.0.0",
