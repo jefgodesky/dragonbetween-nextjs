@@ -6,7 +6,7 @@ describe('getSelectedPOV', () => {
   afterEach(() => setter.mockReset())
 
   it('calls the setter if the target value is found', () => {
-    const fn = getSelectedPOV(setter)
+    const fn = getSelectedPOV(setter, true)
     const value = 'Test'
     const event: PossibleEvent = { target: { value } }
     fn(event)
@@ -14,7 +14,7 @@ describe('getSelectedPOV', () => {
   })
 
   it('doesn\'t call the setter if no target value is found', () => {
-    const fn = getSelectedPOV(setter)
+    const fn = getSelectedPOV(setter, true)
     const event: PossibleEvent = {}
     fn(event)
     expect(setter).not.toHaveBeenCalled()

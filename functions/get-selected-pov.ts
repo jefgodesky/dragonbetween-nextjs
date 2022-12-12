@@ -8,17 +8,17 @@ interface PossibleEvent {
   }
 }
 
-function setPOV (setter: Function, pov: string): void {
+function setPOV (setter: Function, pov: string, testing = false): void {
   setCookie('POV', pov)
   setter(pov)
-  Router.reload()
+  if (!testing) Router.reload()
 }
 
-export default function getSelectedPOV (setter: Function) {
+export default function getSelectedPOV (setter: Function, testing = false) {
   return function (event: PossibleEvent) {
     const val = (event.target as HTMLSelectElement)?.value
-    if (val === 'GM' && challengeGM()) setPOV(setter, 'GM')
-    if (val !== 'GM' && val !== undefined) setPOV(setter, val)
+    if (val === 'GM' && challengeGM()) setPOV(setter, 'GM', testing)
+    if (val !== 'GM' && val !== undefined) setPOV(setter, val, testing)
   }
 }
 
