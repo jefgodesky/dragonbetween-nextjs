@@ -24,7 +24,7 @@ interface CategoryPageProperties {
   initPOV: string
   title: string
   markup: string
-  main: LoreIndexEntry | null,
+  main: LoreIndexEntry | null
   entries: LoreIndexEntry[]
   subcategories: Category[]
   categories: Category[]
@@ -36,7 +36,7 @@ export default function CategoryPage (props: CategoryPageProperties): ReactEleme
   const onPOVChange = getSelectedPOV(setPOV)
   const seeMain = main === null
     ? (<></>)
-    : (<aside className='main'><em>See</em> <a href={`/lore/${main.slug}`}>{main.title}</a></aside>)
+    : (<aside className='main'><em>See</em> <a href={`/lore/${main.slug ?? ''}`}>{main.title}</a></aside>)
   return (
     <>
       <PageHead />
