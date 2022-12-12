@@ -8,6 +8,7 @@
     "start": "next start",
     "test": "jest --detectOpenHandles",
     "lint": "ts-standard",
+    "check": "npm-run-all lint test",
     "compile": "npm-run-all compile:sass compile:lore",
     "compile:sass": "node compilers/sass.mjs",
     "compile:lore": "node compilers/lore-index.mjs"
