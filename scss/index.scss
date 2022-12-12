@@ -6,5 +6,8 @@
 @use 'partials/header';
 @use 'partials/categories';
 
+// Minor components
+@use 'partials/main';
+
 // Special pages
 @use 'partials/home';

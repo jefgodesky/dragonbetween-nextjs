@@ -32,12 +32,16 @@ export default function CategoryPage (props: CategoryPageProperties): ReactEleme
   const { knowledge, initPOV, title, markup, main, entries, subcategories, categories } = props
   const [pov, setPOV] = useState(initPOV)
   const onPOVChange = getSelectedPOV(setPOV)
+  const seeMain = main === null
+    ? (<></>)
+    : (<aside className='main'><em>See</em> <a href={`/lore/${main.slug}`}>{main.title}</a></aside>)
   return (
     <>
       <PageHead />
       <Header knowledge={knowledge} pov={pov} onPOVChange={onPOVChange} />
       <main className='category'>
         <h1>{title}</h1>
+        {seeMain}
         {parse(markup)}
         <Categories categories={categories} />
       </main>
