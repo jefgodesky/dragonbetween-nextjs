@@ -10,7 +10,7 @@ export default function Categories ({ categories }: CategoriesProps): ReactEleme
 
   const items = categories.map((cat, index) => (
     <li key={`category-${index}`}>
-      <a href={`/category/${cat.slug}`}>
+      <a href={`/category/${cat.slug ?? ''}`}>
         {cat.title}
       </a>
     </li>
