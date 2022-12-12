@@ -24,7 +24,7 @@ export default function Home ({ knowledge, initPOV }: HomeProperties): ReactElem
         <section className='current-campaign'>
           <h2>Current Campaign</h2>
           <img src='/img/campaigns/sword-and-shield.png' alt='Eberron: Sword &amp; Shield' />
-          <p><em>Two years after the signing of the <a href='/treaty-of-thronehold'>Treaty of Thronehold</a>, a few <a href='/breland/culture'>Brelish</a> patriots in <a href='/sharn'>Sharn</a> seek to join the <a href='/swords-of-liberty'>Swords of Liberty</a> to end the <a href='/monarchy'>monarchy</a> once and for all. It is the beginning of a tale of radicals and revolution that will change the City of Towers &mdash; and <a href='/eberron'>Eberron</a> &mdash; forever.</em></p>
+          <p><em>Two years after the signing of the <a href='/lore/treaty-of-thronehold'>Treaty of Thronehold</a>, a few <a href='/lore/brelish-culture'>Brelish</a> patriots in <a href='/lore/sharn'>Sharn</a> seek to join the <a href='/lore/swords-of-liberty'>Swords of Liberty</a> to end the <a href='/lore/monarchy'>monarchy</a> once and for all. It is the beginning of a tale of radicals and revolution that will change the City of Towers &mdash; and <a href='/lore/eberron'>Eberron</a> &mdash; forever.</em></p>
         </section>
       </main>
     </>
