@@ -8,6 +8,7 @@ import LoreIndexEntry from '../../types/LoreIndexEntry'
 import PageHead from '../../components/PageHead/PageHead'
 import Header from '../../components/Header/Header'
 import Subcategories from '../../components/Subcategories/Subcategories'
+import CategoryEntries from '../../components/CategoryEntries/CategoryEntries'
 import Categories from '../../components/Categories/Categories'
 import getCategory from '../../functions/get-category'
 import getParentCategories from '../../functions/get-parent-categories'
@@ -45,6 +46,7 @@ export default function CategoryPage (props: CategoryPageProperties): ReactEleme
         {seeMain}
         {parse(markup)}
         <Subcategories categories={subcategories} />
+        <CategoryEntries title={`Lore on ${title}`} entries={entries} />
         <Categories categories={categories} />
       </main>
     </>
