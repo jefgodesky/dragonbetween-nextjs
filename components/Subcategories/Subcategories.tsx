@@ -9,7 +9,7 @@ export default function Subcategories ({ categories }: SubcategoriesProps): Reac
   if (categories.length === 0) return (<></>)
 
   const items = categories.map((cat, index) => (
-    <li key={`category-${index}`}>
+    <li key={`subcategory-${index}`}>
       <a href={`/category/${cat.slug ?? ''}`}>
         {cat.title}
       </a>
