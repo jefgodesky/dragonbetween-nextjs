@@ -50,4 +50,4 @@ jobs:
         run: ssh ${{ secrets.DRAGONBETWEEN_SSH_USER }}@${{ secrets.DRAGONBETWEEN_SSH_HOST }} "pm2 delete dragonbetween"
         continue-on-error: true
       - name: Start app
-        run: ssh ${{ secrets.DRAGONBETWEEN_SSH_USER }}@${{ secrets.DRAGONBETWEEN_SSH_HOST }} "pm2 start npm --name dragonbetween -- start"
+        run: ssh ${{ secrets.DRAGONBETWEEN_SSH_USER }}@${{ secrets.DRAGONBETWEEN_SSH_HOST }} "cd /home/deploy/dragonbetween && pm2 start npm --name dragonbetween -- start"
