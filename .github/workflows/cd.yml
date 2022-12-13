@@ -21,12 +21,8 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: Install dependencies
         run: npm ci
-      - name: Compile index
-        run: npm run compile:lore
-      - name: Run linter
-        run: npm run lint
-      - name: Run tests
-        run: npm test
+      - name: Run linters and tests
+        run: npm run check
   deploy:
     name: Deploy to dragonbetween.net
     needs: test
@@ -42,10 +38,8 @@ jobs:
         run: ssh ${{ secrets.DRAGONBETWEEN_SSH_USER }}@${{ secrets.DRAGONBETWEEN_SSH_HOST }} "cd /home/deploy/dragonbetween && git pull"
       - name: Install dependencies
         run: ssh ${{ secrets.DRAGONBETWEEN_SSH_USER }}@${{ secrets.DRAGONBETWEEN_SSH_HOST }} "cd /home/deploy/dragonbetween && npm install"
-      - name: Run compilers
-        run: ssh ${{ secrets.DRAGONBETWEEN_SSH_USER }}@${{ secrets.DRAGONBETWEEN_SSH_HOST }} "cd /home/deploy/dragonbetween && npm run compile"
       - name: Make a new build
-        run: ssh ${{ secrets.DRAGONBETWEEN_SSH_USER }}@${{ secrets.DRAGONBETWEEN_SSH_HOST }} "cd /home/deploy/dragonbetween && npm run build"
+        run: ssh ${{ secrets.DRAGONBETWEEN_SSH_USER }}@${{ secrets.DRAGONBETWEEN_SSH_HOST }} "cd /home/deploy/dragonbetween && npm run make"
       - name: Stop old app
         run: ssh ${{ secrets.DRAGONBETWEEN_SSH_USER }}@${{ secrets.DRAGONBETWEEN_SSH_HOST }} "pm2 delete dragonbetween"
         continue-on-error: true
