@@ -84,11 +84,11 @@
       "dragons-metallic": null
     }
   },
-  "dragon-chromatic": {
+  "dragons-chromatic": {
     "title": "Chromatic Dragons",
     "secret": "Dragons2"
   },
-  "dragon-metallic": {
+  "dragons-metallic": {
     "title": "Metallic Dragons",
     "secret": "Dragons2"
   },
@@ -164,7 +164,7 @@
       "eberron": null
     }
   },
-  "Modern Age": {
+  "modern-age": {
     "title": "Modern Age"
   },
   "monstrosities": {
@@ -195,7 +195,8 @@
     "title": "Planes",
     "subcategories": {
       "orbital-planes": null,
-      "liminal-planes": null
+      "liminal-planes": null,
+      "material-plane": null
     }
   },
   "plants": {
