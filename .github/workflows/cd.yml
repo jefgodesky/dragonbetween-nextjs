@@ -37,11 +37,8 @@ jobs:
       - name: Stop old app
         run: ssh ${{ secrets.DRAGONBETWEEN_SSH_USER }}@${{ secrets.DRAGONBETWEEN_SSH_HOST }} "pm2 delete dragonbetween"
         continue-on-error: true
-      - name: Delete old app
-        run: ssh ${{ secrets.DRAGONBETWEEN_SSH_USER }}@${{ secrets.DRAGONBETWEEN_SSH_HOST }} "rm -Rf /home/deployer/dragonbetween"
-        continue-on-error: true
       - name: Pull the app from Github
-        run: ssh ${{ secrets.DRAGONBETWEEN_SSH_USER }}@${{ secrets.DRAGONBETWEEN_SSH_HOST }} "cd /home/deployer && git clone https://github.com/jefgodesky/dragonbetween.git"
+        run: ssh ${{ secrets.DRAGONBETWEEN_SSH_USER }}@${{ secrets.DRAGONBETWEEN_SSH_HOST }} "cd /home/deployer && git pull"
       - name: Build the app
         run: ssh ${{ secrets.DRAGONBETWEEN_SSH_USER }}@${{ secrets.DRAGONBETWEEN_SSH_HOST }} "cd /home/deployer/dragonbetween && npm install && npm run make"
       - name: Start app
