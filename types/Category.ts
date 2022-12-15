@@ -1,5 +1,6 @@
 interface Category {
   title: string
+  sort?: string
   description?: string
   main?: string
   secret?: string
@@ -12,12 +13,13 @@ interface Category {
 const isCategory = (obj: any): obj is Category => {
   if (obj === null) return false
   if (typeof obj !== 'object' || Array.isArray(obj)) return false
-  const { title, description, main, secret, slug, subcategories } = obj
+  const { title, sort, description, main, secret, slug, subcategories } = obj
   if (typeof title !== 'string') return false
-  if (!(description === undefined || typeof description === 'string')) return false
-  if (!(main === undefined || typeof main === 'string')) return false
-  if (!(secret === undefined || typeof secret === 'string')) return false
-  if (!(slug === undefined || typeof slug === 'string')) return false
+  if (sort !== undefined && typeof sort !== 'string') return false
+  if (description !== undefined && typeof description !== 'string') return false
+  if (main !== undefined && typeof main !== 'string') return false
+  if (secret !== undefined && typeof secret !== 'string') return false
+  if (slug !== undefined && typeof slug !== 'string') return false
 
   if (subcategories === undefined) return true
   if (subcategories === null) return false

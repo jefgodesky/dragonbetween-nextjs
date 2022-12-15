@@ -2,6 +2,7 @@ import { isCategory } from './Category'
 
 describe('isCategory', () => {
   const title = 'Test Title'
+  const sort = 'Title, Test'
   const description = 'This is a description.'
   const main = 'tests'
   const secret = 'Secret1'
@@ -70,6 +71,38 @@ describe('isCategory', () => {
 
   it('returns false if given an object for a title', () => {
     expect(isCategory({ title: { title } })).toBe(false)
+  })
+
+  it('returns false if given null for a sort', () => {
+    expect(isCategory({ title, sort: null })).toBe(false)
+  })
+
+  it('returns true if given undefined for a sort', () => {
+    expect(isCategory({ title, sort: undefined })).toBe(true)
+  })
+
+  it('returns false if given true for a sort', () => {
+    expect(isCategory({ title, sort: true })).toBe(false)
+  })
+
+  it('returns false if given false for a sort', () => {
+    expect(isCategory({ title, sort: false })).toBe(false)
+  })
+
+  it('returns false if given a number for a sort', () => {
+    expect(isCategory({ title, sort: 1 })).toBe(false)
+  })
+
+  it('returns true if given a string for a sort', () => {
+    expect(isCategory({ title, sort })).toBe(true)
+  })
+
+  it('returns false if given an array for a sort', () => {
+    expect(isCategory({ title, sort: sort.split('') })).toBe(false)
+  })
+
+  it('returns false if given an object for a sort', () => {
+    expect(isCategory({ title, sort: { sort } })).toBe(false)
   })
 
   it('returns false if given null for a description', () => {
