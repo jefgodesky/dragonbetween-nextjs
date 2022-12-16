@@ -1,4 +1,4 @@
-import getRollableTableFromTables from './get-table'
+import getRollableTableFromTables from './get-rollable-table-from-tables'
 
 describe('getRollableTableFromTables', () => {
   const tables = {
