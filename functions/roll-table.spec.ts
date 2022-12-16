@@ -5,7 +5,7 @@ describe('rollTable', () => {
     Names: {
       dice: '2d4',
       rows: [
-        { min: 2, max: 8, result: '<FIRST NAMES> <LAST NAMES>'}
+        { min: 2, max: 8, result: '<FIRST NAMES> <LAST NAMES>' }
       ]
     },
     'First Names': {
