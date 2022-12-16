@@ -1,6 +1,6 @@
-import getTable from './get-table'
+import getRollableTableFromTables from './get-table'
 
-describe('getTable', () => {
+describe('getRollableTableFromTables', () => {
   const tables = {
     easy: {
       dice: '1d6',
@@ -26,12 +26,12 @@ describe('getTable', () => {
   }
 
   it('returns the table if it\'s there', () => {
-    const actual = getTable('normal', tables)
+    const actual = getRollableTableFromTables('normal', tables)
     expect(actual?.rows[0].max).toEqual(3)
   })
 
   it('returns null if there is no such table', () => {
-    const actual = getTable('nope', tables)
+    const actual = getRollableTableFromTables('nope', tables)
     expect(actual).toBeNull()
   })
 })
