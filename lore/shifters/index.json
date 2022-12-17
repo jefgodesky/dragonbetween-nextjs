@@ -1,0 +1,14 @@
+{
+  "title": "Shifters",
+  "image": "https://dragonbetween.net/img/shifters/social.jpg",
+  "description": "Shifters (sometimes also referred to as weretouched) are a species of humanoids noted for their bestial features.",
+  "text": {
+    "Humanoids3": "lvl3.md",
+    "Humanoids2": "lvl2.md",
+    "Humanoids1": "lvl1.md",
+    "default": "lvl0.md"
+  },
+  "categories": {
+    "humanoids": null
+  }
+}
