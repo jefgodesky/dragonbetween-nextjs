@@ -10,6 +10,8 @@ export default function PageHeadTwitterCard (props: PageHeadTwitterCardProps): R
   const title = props.title ?? 'The Dragon Between'
   const description = props.description ?? 'Welcome to Eberron.'
   const image = props.image ?? 'https://dragonbetween.net/img/social.jpg'
+  console.log(props)
+  console.log({ title, description, image })
 
   return (
     <>

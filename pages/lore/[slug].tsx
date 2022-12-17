@@ -17,16 +17,19 @@ interface LoreProperties {
   knowledge: CharacterKnowledge
   initPOV: string
   title: string
+  image?: string
+  description?: string
   markup: string
+  path: string
   categories: Category[]
 }
 
-export default function Lore ({ knowledge, initPOV, title, markup, categories }: LoreProperties): ReactElement {
+export default function Lore ({ knowledge, initPOV, title, image, description, markup, path, categories }: LoreProperties): ReactElement {
   const [pov, setPOV] = useState(initPOV)
   const onPOVChange = getSelectedPOV(setPOV)
   return (
     <>
-      <PageHead />
+      <PageHead title={title} path={path} description={description} image={image} />
       <Header knowledge={knowledge} pov={pov} onPOVChange={onPOVChange} />
       <main className='lore'>
         <h1>{title}</h1>
@@ -48,10 +51,13 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   const pov = typeof initPOV === 'string' ? initPOV : 'None'
   const know = knowledge[pov] ?? {}
   const title = entry === null ? 'What’s that?' : entry.title
+  const image = entry?.image === undefined ? '/img/social.jog' : entry.image
+  const description = entry?.description === undefined ? 'Welcome to Eberron.' : entry.description
   const markup = entry === null
     ? '<p>You&rsquo;ve never heard of such a thing&hellip;</p>'
     : await renderLoreText(entry, know)
+  const path = `/lore/${slug}`
   const categories = entry === null ? [] : getLoreIndexEntryCategories(entry, know)
 
-  return { props: { knowledge, initPOV, title, markup, categories } }
+  return { props: { knowledge, initPOV, title, image, description, markup, path, categories } }
 }

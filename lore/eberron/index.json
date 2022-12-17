@@ -1,5 +1,6 @@
 {
   "title": "Eberron",
+  "image": "https://dragonbetween.net/img/eberron/social.jpg",
   "text": {
     "default": "index.md"
   }

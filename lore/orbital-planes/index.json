@@ -1,5 +1,6 @@
 {
   "title": "Orbital Planes",
+  "image": "https://dragonbetween.net/img/planes/social.jpg",
   "description": "The thirteen orbital planes or true planes are what most people mean when they refer to “the planes.” These planes seem to “orbit” the material plane somehow, their influence waxing and waning over time.",
   "text": {
     "default": "index.md"

@@ -1,5 +1,6 @@
 {
   "title": "Orcs",
+  "image": "https://dragonbetween.net/img/orcs/social.jpg",
   "description": "Orcs are a species of humanoids native to Khorvaire noted for their primal connection to Eberron and deep passions.",
   "text": {
     "Humanoids3": "lvl3.md",

@@ -1,5 +1,6 @@
 {
   "title": "Goblinoids",
+  "image": "https://dragonbetween.net/img/goblinoids/social.jpg",
   "description": "Goblinoids are a subgroup of humanoids native to Khorvaire consisting of bugbears, goblins, and hobgoblins.",
   "text": {
     "Humanoids3 || Goblinoid": "lvl3.md",
