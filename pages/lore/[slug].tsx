@@ -56,7 +56,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   const markup = entry === null
     ? '<p>You&rsquo;ve never heard of such a thing&hellip;</p>'
     : await renderLoreText(entry, know)
-  const path = `/lore/${slug}`
+  const path = `/lore/${id}`
   const categories = entry === null ? [] : getLoreIndexEntryCategories(entry, know)
 
   return { props: { knowledge, initPOV, title, image, description, markup, path, categories } }
