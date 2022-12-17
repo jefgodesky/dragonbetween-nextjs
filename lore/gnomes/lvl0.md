@@ -73,10 +73,10 @@ between gnomish males and females in terms of
 height, weight, and muscle mass, though nowhere
 near the differences found in many [[beasts]].
 
-Measurement | Male μ | Male σ | Female μ | Female σ
---- | --- | --- | --- | ---
-Height | 44 in | 2 in | 40 in | 2 in
-Weight | 45 lbs. | 4 lbs. | 35 lbs. | 3 lbs.
+| Measurement | Male μ  | Male σ | Female μ | Female σ |
+|-------------|---------|--------|----------|----------|
+| Height      | 44 in   | 2 in   | 40 in    | 2 in     |
+| Weight      | 45 lbs. | 4 lbs. | 35 lbs.  | 3 lbs.   |
 
 Gnomes are one of the smallest humanoid species,
 smaller even than [[halflings]]. They have pointed

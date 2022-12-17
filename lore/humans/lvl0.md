@@ -12,10 +12,10 @@ between human males and females in terms of
 height, weight, and muscle mass, though nowhere
 near the differences found in many [[beasts]].
 
-Measurement | Male μ | Male σ | Female μ | Female σ
---- | --- | --- | --- | ---
-Height | 70 in | 3 in | 64.5 in | 2.5 in
-Weight | 190 lbs. | 20 lbs. | 170 lbs. | 18 lbs.
+| Measurement | Male μ   | Male σ  | Female μ | Female σ |
+|-------------|----------|---------|----------|----------|
+| Height      | 70 in    | 3 in    | 64.5 in  | 2.5 in   |
+| Weight      | 190 lbs. | 20 lbs. | 170 lbs. | 18 lbs.  |
 
 Humans typically have thick hair on the tops of
 their heads. Males can grow equally thick hair on

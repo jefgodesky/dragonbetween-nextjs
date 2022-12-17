@@ -42,10 +42,10 @@ and weight. Like most other humanoids, the
 differences between males and females are
 very slight.
 
-Measurement | Male μ | Male σ | Female μ | Female σ
---- | --- | --- | --- | ---
-Height | 36 in | 2 in | 33 in | 1 in
-Weight | 40 lbs. | 4 lbs. | 35 lbs. | 3.5 lbs.
+| Measurement | Male μ  | Male σ | Female μ | Female σ |
+|-------------|---------|--------|----------|----------|
+| Height      | 36 in   | 2 in   | 33 in    | 1 in     |
+| Weight      | 40 lbs. | 4 lbs. | 35 lbs.  | 3.5 lbs. |
 
 Halflings typically have thick hair on the tops
 of their heads. Males can grow equally thick hair

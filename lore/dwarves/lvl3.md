@@ -118,10 +118,10 @@ between dwarven males and females in terms of
 height, weight, and muscle mass, though nowhere
 near the differences found in many [[beasts]].
 
-Measurement | Male μ | Male σ | Female μ | Female σ
---- | --- | --- | --- | ---
-Height | 55 in | 2 in | 50 in | 2 in
-Weight | 150 lbs. | 15 lbs. | 140 lbs. | 14 lbs.
+| Measurement | Male μ   | Male σ  | Female μ | Female σ |
+|-------------|----------|---------|----------|----------|
+| Height      | 55 in    | 2 in    | 50 in    | 2 in     |     
+| Weight      | 150 lbs. | 15 lbs. | 140 lbs. | 14 lbs.  |  
 
 Dwarves have thick hair on the tops of their heads.
 Males can grow equally thick hair on their lower

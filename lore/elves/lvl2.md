@@ -187,10 +187,10 @@ particularly androgynous. Gender does not play
 a strong role in many elven cultures, and
 genderfluidity is quite common among them.
 
-Measurement | Male μ | Male σ | Female μ | Female σ
---- | --- | --- | --- | ---
-Height | 66 in | 3 in | 63 in | 3 in
-Weight | 120 lbs. | 5 lbs. | 115 lbs. | 5 lbs.
+| Measurement | Male μ   | Male σ | Female μ | Female σ |
+|-------------|----------|--------|----------|----------|
+| Height      | 66 in    | 3 in   | 63 in    | 3 in     |     
+| Weight      | 120 lbs. | 5 lbs. | 115 lbs. | 5 lbs.   |
 
 Elves typically stand slightly shorter than
 [[humans]], with slight, gracile builds. They
